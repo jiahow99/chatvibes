@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 class Chatlist extends Component
 {
     public $conversations;
+    public $user;
     public $selected_conversation;
 
     protected $listeners = [
@@ -20,8 +21,14 @@ class Chatlist extends Component
 
     public function mount()
     {
+        $this->user = Auth::user();
         $this->conversations = $this->format_conversations(Auth::user()->conversations()->with('messages')->get()->toArray());
         // $this->conversations = Auth::user()->conversations()->with('messages')->get()->toArray();
+    }
+    
+    public function get_user_avatar(User $user)
+    {
+        return $user->name;
     }
 
     public function conversation_selected(Conversation $conversation, string $receiver_id)
