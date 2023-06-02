@@ -14,15 +14,11 @@
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
-    <script>        
+    <script>
         $(document).ready(function(){
-            
-            $('.chat').click(function(){
-                setTimeout(function() {
-                    var chatboxBody = $('.chatbox_body');
-                    chatboxBody.animate({ scrollTop: chatboxBody.prop('scrollHeight') }, 500);
-                }, 1000);
-            });
+            // Function to scroll the chatbox to the bottom
+            var chatbox = $('.chatbox_body');
+            chatbox.scrollTop(chatbox[0].scrollHeight);
 
             // Hide chatlist and show chatbox (Mobile)
             if ($(window).width() <= 767) {

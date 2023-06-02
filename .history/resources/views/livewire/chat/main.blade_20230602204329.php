@@ -16,12 +16,27 @@
 
     <script>        
         $(document).ready(function(){
+
+            var chatbox = $('#chatbox')[0]; // Get the raw DOM element
+
+            // Create a new MutationObserver instance
+            var observer = new MutationObserver(function(mutationsList) {
+                // Check if the chatbox is visible
+                if ($(chatbox).is(':visible')) {
+                // Code to execute when the chatbox appears
+                console.log('Chatbox is now visible');
+                // Add more code here
+
+                // Disconnect the observer to stop observing changes
+                observer.disconnect();
+                };
             
+            $('.chatbox_body').show();
             $('.chat').click(function(){
                 setTimeout(function() {
                     var chatboxBody = $('.chatbox_body');
-                    chatboxBody.animate({ scrollTop: chatboxBody.prop('scrollHeight') }, 500);
-                }, 1000);
+                chatboxBody.animate({ scrollTop: chatboxBody.prop('scrollHeight') }, 500);
+                }, 2000);
             });
 
             // Hide chatlist and show chatbox (Mobile)

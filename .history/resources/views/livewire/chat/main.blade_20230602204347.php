@@ -20,7 +20,7 @@
             $('.chat').click(function(){
                 setTimeout(function() {
                     var chatboxBody = $('.chatbox_body');
-                    chatboxBody.animate({ scrollTop: chatboxBody.prop('scrollHeight') }, 500);
+                chatboxBody.animate({ scrollTop: chatboxBody.prop('scrollHeight') }, 500);
                 }, 1000);
             });
 

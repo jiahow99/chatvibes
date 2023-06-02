@@ -24,6 +24,7 @@
 
         <!-- Chatbox -->
         <div id="chatbox" class="chatbox_body flex-grow-1 h-24 px-2 pt-3 pb-14 space-y-6 overflow-y-auto">
+            123
             @if ($messages)
                 @foreach ($messages as $message)
                     <div class="col-9 @if($message['category'] == 'receive') bg-slate-200 @else bg-blue-500 ml-auto text-white @endif  p-3 rounded-xl">
@@ -68,3 +69,7 @@
         </div>
     @endif
 </div>
+
+<script>
+    alert(document.querySelector('#chatbox'));
+</script>

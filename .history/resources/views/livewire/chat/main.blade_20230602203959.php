@@ -20,8 +20,8 @@
             $('.chat').click(function(){
                 setTimeout(function() {
                     var chatboxBody = $('.chatbox_body');
-                    chatboxBody.animate({ scrollTop: chatboxBody.prop('scrollHeight') }, 500);
-                }, 1000);
+                chatboxBody.animate({ scrollTop: chatboxBody.prop('scrollHeight') }, 500);
+                }, 2000);
             });
 
             // Hide chatlist and show chatbox (Mobile)

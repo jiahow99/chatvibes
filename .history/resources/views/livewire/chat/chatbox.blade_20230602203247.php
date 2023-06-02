@@ -68,3 +68,7 @@
         </div>
     @endif
 </div>
+
+<script>
+    alert(document.querySelector('#chatbox'));
+</script>

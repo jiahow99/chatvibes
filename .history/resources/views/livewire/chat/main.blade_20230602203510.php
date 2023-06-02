@@ -16,14 +16,6 @@
 
     <script>        
         $(document).ready(function(){
-            
-            $('.chat').click(function(){
-                setTimeout(function() {
-                    var chatboxBody = $('.chatbox_body');
-                    chatboxBody.animate({ scrollTop: chatboxBody.prop('scrollHeight') }, 500);
-                }, 1000);
-            });
-
             // Hide chatlist and show chatbox (Mobile)
             if ($(window).width() <= 767) {
                 $('.chat').click(function(){
